@@ -4,30 +4,71 @@
     <style type="text/css">
     
         body {
-    		background: #2f3c46;
+    		background: #1c516e;
 		}
 
-        .first_stanza {
-            /* Alignment */
-            height: 100vh;
+        .scene {
             width: 100vw;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            
-            /* Text */
-            color: #dddddd;
-            text-shadow: 2px 2px 2px #222222;
-            font-size: x-large;
-            font-style: italic;
-            font-family: monospace;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+        }
+
+        .hero-graphic {
+            perspective: 1px;
+            height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+            background: #AFD3ED;
+        }
+
+        .layer-1 {
+            z-index: -1;
+            transform: translateZ(-1px) scale(2);
+        }
+
+        .layer-2 {
+            z-index: -2;
+            transform: translateZ(-2px) scale(3);
+        }
+
+        .layer-3 {
+            z-index: -3;
+            transform: translateZ(-3px) scale(4);
+        }
+
+        .layer-4 {
+            z-index: -4;
+            transform: translateZ(-4px) scale(5);
+        }
+
+        .layer-5 {
+            z-index: -5;
+            transform: translateZ(-5px) scale(6);
+        }
+
+        .layer-6 {
+            z-index: -6;
+            transform: translateZ(-6px) scale(7);
+        }
+
+        .layer-7 {
+            z-index: -7;
+            transform: translateZ(-7px) scale(8);
         }
     
     </style>
     <title>tpsavard.net</title>
 </head>
 <body>
-    <div class="first_stanza">
-        <span>"So much for the little training cruise..."</span>
-    </div>
+    <div class="scene hero-graphic">
+        <img class="scene layer-1" src="assets/imgs/Trees1.svg" />
+        <img class="scene layer-2" src="assets/imgs/Trees2.svg" />
+        <img class="scene layer-3" src="assets/imgs/Range1.svg" />
+        <img class="scene layer-4" src="assets/imgs/Range2.svg" />
+        <img class="scene layer-5" src="assets/imgs/Range3.svg" />
+        <img class="scene layer-6" src="assets/imgs/Sky1.svg" />
+        <img class="scene layer-7" src="assets/imgs/Sky2.svg" />
+     </div>
 </body>
