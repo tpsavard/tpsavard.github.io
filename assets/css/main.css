@@ -1,0 +1,31 @@
+body {
+    background: black;
+}
+
+.first-stanza {
+    /* Alignment */
+    height: 98vh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-stanza h1 {
+    /* Text */
+    color: white;
+    font-size: 80pt;
+    font-family: 'Montserrat', sans-serif;
+
+    /* Box */
+    margin-bottom: 0px;
+}
+
+.first-stanza p {
+    /* Text */
+    color: white;
+    font-size: 16pt;
+    font-family: 'Montserrat', sans-serif;
+}
