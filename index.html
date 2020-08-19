@@ -4,20 +4,67 @@
     <style type="text/css">
     
         body {
-    		background: #2f3c46;
-		}
+            background: black;
+        }
 
-        .first_stanza {
-            /* Alignment */
-            height: 100vh;
+        .screen {
             width: 100vw;
+            position: absolute;
+            left: 0px;
+            right: 0px;
+        }
+
+        .outer {
+            perspective: 1px;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        .layer-0 {
+            z-index: 0;
+        }
+
+        .layer-1 {
+            z-index: -1;
+            transform: translateZ(-.25px);
+        }
+
+        .layer-2 {
+            z-index: -2;
+            transform: translateZ(-.5px);
+        }
+
+        .COM {
+            /* Screen Positioning */
+            top: 0px;
+            height: 100vh;
+
+            /* Text Layout */
             display: flex;
             justify-content: center;
             align-items: center;
-            
-            /* Text */
+
+            /* Text Style */
             color: #dddddd;
-            text-shadow: 2px 2px 2px #222222;
+            text-shadow: 2px 2px 2px #999999;
+            font-size: x-large;
+            font-style: italic;
+            font-family: monospace;
+        }
+
+        .NAV {
+            /* Screen Positioning */
+            top: 100vh;
+            height: 100vh;
+
+            /* Text Layout */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* Text Style */
+            color: #dddddd;
+            text-shadow: 2px 2px 2px #999999;
             font-size: x-large;
             font-style: italic;
             font-family: monospace;
@@ -27,7 +74,14 @@
     <title>tpsavard.net</title>
 </head>
 <body>
-    <div class="first_stanza">
-        <span>"So much for the little training cruise..."</span>
+    <div class="screen outer COM">
+        <div class="screen layer-0 COM">Block 1</div>
+        <img class="screen layer-1 COM" src="assets/imgs/red.svg" />
+        <img class="screen layer-2 COM" src="assets/imgs/green.svg" />
+    </div>
+    <div class="screen outer NAV">
+        <div class="screen layer-0 NAV">Block 2</div>
+        <img class="screen layer-1 NAV" src="assets/imgs/red.svg" />
+        <img class="screen layer-2 NAV" src="assets/imgs/green.svg" />
     </div>
 </body>
