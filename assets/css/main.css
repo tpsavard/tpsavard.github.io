@@ -1,10 +1,22 @@
 body {
-    background: black;
+    background: white;
+}
+
+.lead-in {
+    /* Placement */
+    width: 100vw;
+    text-align: center;
+
+    /* Text */
+    color: #999999;
+    font-size: 12pt;
+    font-weight: 300;
+    font-family: 'Lato', sans-serif;
 }
 
 .first-stanza {
-    /* Alignment */
-    height: 98vh;
+    /* Placement */
+    height: 96vh;
     width: 100vw;
 
     display: flex;
@@ -13,19 +25,43 @@ body {
     align-items: center;
 }
 
-.first-stanza h1 {
-    /* Text */
-    color: white;
-    font-size: 80pt;
-    font-family: 'Montserrat', sans-serif;
-
-    /* Box */
-    margin-bottom: 0px;
+.first-stanza img {
+    height: 60vh;
+    width: 60vw;
+    object-fit: cover;
+    border: solid white 1px;
+    margin-bottom: 6px;
+    filter: invert(1);
 }
 
-.first-stanza p {
+.first-stanza h1 {
+    width: 60vw;
+
     /* Text */
-    color: white;
+    color: black;
     font-size: 16pt;
     font-family: 'Montserrat', sans-serif;
+}
+
+
+/* Dark mode modifications */
+
+@media (prefers-color-scheme: dark) {
+
+    body {
+        background: black;
+    }
+
+    .lead-in {
+        color: #666666;
+    }
+
+    .first-stanza img {
+        filter: invert(0);
+    }
+
+    .first-stanza h1 {
+        color: white;
+    }
+
 }
