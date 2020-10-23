@@ -1,0 +1,73 @@
+---
+---
+
+@import 'base';
+
+body {
+    /* External */
+    margin: 0px;
+
+    /* Self */
+    @include bg-max-color;
+    @include min-color;
+}
+
+a {
+    @include twenty-color;
+}
+
+section.title {
+    /* External */
+    height: 35px;
+    width: 150px;
+    margin: 20px auto;
+
+    /* Internal */
+    @include centered;
+
+    /* Self */
+    @include bg-min-color;
+    @include multi-mode-color(box-shadow, 7px 5px $twenty-color, 7px 5px $dark-twenty-color);
+
+    p {
+        /* External */
+        margin: 0px;
+        padding: 0px;
+
+        /* Self */
+        @include max-color;
+        font-size: 12pt;
+        font-weight: 500;
+        font-family: $title-font;
+    }
+}
+
+section.banner {
+    /* External */
+    min-height: 125px;
+    width: 75vw;
+    padding: 20px;
+    margin: auto auto 14px;
+    box-sizing: border-box;
+
+    /* Internal */
+    @include centered;
+
+    /* Self */
+    @include bg-min-color;
+    box-shadow: 10px 7px $twenty-color, 20px 14px $eighty-color;
+    @media (prefers-color-scheme: dark) {
+        box-shadow: 10px 7px $dark-twenty-color, 20px 14px $dark-eighty-color;
+    }
+
+    h1 {
+        /* External */
+        margin: 0px;
+
+        /* Self */
+        @include max-color;
+        font-size: 32pt;
+        font-weight: 400;
+        font-family: $banner-font;
+    }
+}

@@ -1,0 +1,44 @@
+// Light-mode colors
+$max-color: #eeecda;
+$eighty-color: #f08a5d;
+$twenty-color: #b83b5e;
+$min-color: #6a2c70;
+
+// Dark-mode colors
+$dark-max-color: #0f3057;
+$dark-eighty-color: #00587a;
+$dark-twenty-color: #008891;
+$dark-min-color: #e7e7de;
+
+// Color mix-ins
+@mixin bg-max-color { @include multi-mode-color(background-color, $max-color, $dark-max-color); }
+@mixin max-color { @include multi-mode-color(color, $max-color, $dark-max-color); }
+
+@mixin bg-eighty-color { @include multi-mode-color(background-color, $eighty-color, $dark-eighty-color); }
+@mixin eighty-color { @include multi-mode-color(color, $eighty-color, $dark-eighty-color); }
+
+@mixin bg-twenty-color { @include multi-mode-color(background-color, $twenty-color, $dark-twenty-color); }
+@mixin twenty-color { @include multi-mode-color(color, $twenty-color, $dark-twenty-color); }
+
+@mixin bg-min-color { @include multi-mode-color(background-color, $min-color, $dark-min-color); }
+@mixin min-color { @include multi-mode-color(color, $min-color, $dark-min-color); }
+
+@mixin multi-mode-color($selector, $light-color, $dark-color) {
+    #{$selector}: $light-color;
+    @media (prefers-color-scheme: dark) {
+        #{$selector}: $dark-color;
+    }
+}
+
+// Text
+$banner-font: 'Montserrat Subrayada', sans-serif;
+$title-font: 'Montserrat', sans-serif;
+$body-font: 'Raleway', sans-serif;
+
+// Shortcuts
+@mixin centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
