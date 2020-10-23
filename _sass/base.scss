@@ -10,30 +10,63 @@ $dark-eighty-color: #00587a;
 $dark-twenty-color: #008891;
 $dark-min-color: #e7e7de;
 
-// Color mix-ins
-@mixin bg-max-color { @include multi-mode-color(background-color, $max-color, $dark-max-color); }
-@mixin max-color { @include multi-mode-color(color, $max-color, $dark-max-color); }
-
-@mixin bg-eighty-color { @include multi-mode-color(background-color, $eighty-color, $dark-eighty-color); }
-@mixin eighty-color { @include multi-mode-color(color, $eighty-color, $dark-eighty-color); }
-
-@mixin bg-twenty-color { @include multi-mode-color(background-color, $twenty-color, $dark-twenty-color); }
-@mixin twenty-color { @include multi-mode-color(color, $twenty-color, $dark-twenty-color); }
-
-@mixin bg-min-color { @include multi-mode-color(background-color, $min-color, $dark-min-color); }
-@mixin min-color { @include multi-mode-color(color, $min-color, $dark-min-color); }
-
-@mixin multi-mode-color($selector, $light-color, $dark-color) {
-    #{$selector}: $light-color;
-    @media (prefers-color-scheme: dark) {
-        #{$selector}: $dark-color;
-    }
-}
-
-// Text
+// Fonts
 $banner-font: 'Montserrat Subrayada', sans-serif;
 $title-font: 'Montserrat', sans-serif;
 $body-font: 'Raleway', sans-serif;
+
+// Color shortcuts
+@mixin bg-max-color {
+    background-color: $max-color;
+    @media (prefers-color-scheme: dark) {
+        background-color: $dark-max-color;
+    }
+}
+@mixin max-color { 
+    color: $max-color;
+    @media (prefers-color-scheme: dark) {
+        color: $dark-max-color;
+    }
+}
+
+@mixin bg-eighty-color {
+    background-color: $eighty-color;
+    @media (prefers-color-scheme: dark) {
+        background-color: $dark-eighty-color;
+    }
+}
+@mixin eighty-color { 
+    color: $eighty-color;
+    @media (prefers-color-scheme: dark) {
+        color: $dark-eighty-color;
+    }
+}
+
+@mixin bg-twenty-color {
+    background-color: $twenty-color;
+    @media (prefers-color-scheme: dark) {
+        background-color: $dark-twenty-color;
+    }
+}
+@mixin twenty-color { 
+    color: $twenty-color;
+    @media (prefers-color-scheme: dark) {
+        color: $dark-twenty-color;
+    }
+}
+
+@mixin bg-min-color {
+    background-color: $min-color;
+    @media (prefers-color-scheme: dark) {
+        background-color: $dark-min-color;
+    }
+}
+@mixin min-color { 
+    color: $min-color;
+    @media (prefers-color-scheme: dark) {
+        color: $dark-min-color;
+    }
+}
 
 // Shortcuts
 @mixin centered {
