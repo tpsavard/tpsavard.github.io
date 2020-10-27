@@ -10,22 +10,53 @@ body {
     /* Self */
     @include bg-max-color;
     @include min-color;
+    font-size: 12pt;
+    font-weight: 300;
+    font-family: $body-font;
 }
 
-a {
-    @include twenty-color;
-}
-
-section.banner {
+header .title {
     /* External */
-    min-height: 125px;
-    width: 75vw;
-    padding: 20px;
-    margin: 65px auto 14px;
+    width: 35vw;
+    margin: 45px auto auto;
     box-sizing: border-box;
 
     /* Internal */
-    @include centered;
+    display: flex;
+    justify-content: space-evenly;
+
+    /* Self */
+    font-family: $title-font;
+
+    p {
+        /* External */
+        margin: 0px;
+
+        a {
+            /* Self */
+            @include min-color;
+            font-family: $title-font;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+header .banner {
+    /* External */
+    min-height: 120px;
+    width: 85vw;
+    padding: 30px;
+    margin: 15px auto 14px;
+    box-sizing: border-box;
+
+    /* Internal */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     /* Self */
     @include bg-min-color;
@@ -36,7 +67,7 @@ section.banner {
 
     h1 {
         /* External */
-        margin: 8px 0px 3px;
+        margin: 0px; 
 
         /* Self */
         @include max-color;
@@ -44,54 +75,34 @@ section.banner {
         font-weight: 400;
         font-family: $banner-font;
     }
-
-    p {
-        /* External */
-        margin: 0px;
-        padding: 0px;
-
-        /* Self */
-        @include max-color;
-        font-size: 11pt;
-        font-weight: 500;
-        font-family: $title-font;
-    }
 }
 
-section.about {
+nav {
     /* External */
-    min-height: 125px;
-    width: 75vw;
-    padding: 20px;
-    margin: 25px auto auto;
+    width: 35vw;
+    padding: 15px;
+    margin: 45px auto auto;
     box-sizing: border-box;
 
     /* Internal */
-    @include centered;
+    display: flex;
+    justify-content: space-evenly;
 
-    p {
-        /* External */
-        margin: 0px;
-        padding: 0px;
-
-        /* Internal */
-        text-align: center;
-
-        /* Self */
-        font-size: 12pt;
-        font-weight: 300;
-        font-family: $body-font;
+    /* Self */
+    @include bg-min-color;
+    @include max-color;
+    box-shadow: 10px 7px $twenty-color;
+    @media (prefers-color-scheme: dark) {
+        box-shadow: 10px 7px $dark-twenty-color;
     }
 
-    .socials a {
-        /* External */
-        padding: 10px;
-        margin: 10px 5px 10px;
-        
-        /* Internal */
-        @include bg-twenty-color;
-        @include min-color;
-        font-size: 18pt;
-        text-decoration: none; 
+    a {
+        /* Self */
+        @include max-color;
+        font-family: $title-font;
+        text-decoration: none;
+        &:hover {
+                text-decoration: underline;
+        };
     }
 }
