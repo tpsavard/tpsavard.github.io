@@ -15,77 +15,79 @@ body {
     font-family: $body-font;
 }
 
-header .title {
-    /* External */
-    width: 35vw;
-    margin: 45px auto auto;
-    box-sizing: border-box;
-
-    /* Internal */
-    display: flex;
-    justify-content: space-evenly;
-
-    /* Self */
-    font-family: $title-font;
-
-    p {
+header {
+    .title {
         /* External */
-        margin: 0px;
+        margin: 45px auto auto;
+        box-sizing: border-box;
 
-        a {
-            /* Self */
-            @include min-color;
-            font-family: $title-font;
-            text-decoration: none;
-            &:hover {
-                text-decoration: underline;
+        /* Internal */
+        display: flex;
+        justify-content: center;
+
+        /* Self */
+        font-family: $title-font;
+
+        p {
+            /* External */
+            margin: 0px;
+
+            a {
+                /* Self */
+                @include min-color;
+                font-family: $title-font;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
     }
-}
 
-header .banner {
-    /* External */
-    min-height: 120px;
-    width: 85vw;
-    padding: 30px;
-    margin: 15px auto 14px;
-    box-sizing: border-box;
-
-    /* Internal */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    /* Self */
-    @include bg-min-color;
-    box-shadow: 10px 7px $twenty-color, 20px 14px $eighty-color;
-    @media (prefers-color-scheme: dark) {
-        box-shadow: 10px 7px $dark-twenty-color, 20px 14px $dark-eighty-color;
-    }
-
-    h1 {
+    .banner {
         /* External */
-        margin: 0px; 
+        min-height: 120px;
+        width: 85vw;
+        padding: 30px 30px;
+        margin: 10px auto 44px;
+        box-sizing: border-box;
+
+        /* Internal */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
         /* Self */
-        @include max-color;
-        font-size: 32pt;
-        font-weight: 400;
-        font-family: $banner-font;
-    }
+        @include bg-min-color;
+        box-shadow: 10px 7px $twenty-color, 20px 14px $eighty-color;
+        @media (prefers-color-scheme: dark) {
+            box-shadow: 10px 7px $dark-twenty-color, 20px 14px $dark-eighty-color;
+        }
+
+        h1 {
+            /* External */
+            margin: 0px; 
+
+            /* Self */
+            @include max-color;
+            font-size: 32pt;
+            font-weight: 400;
+            font-family: $banner-font;
+        }
+    }   
 }
 
 nav {
     /* External */
     width: 35vw;
     padding: 15px;
-    margin: 45px auto auto;
+    margin: 15px auto 7px;
     box-sizing: border-box;
 
     /* Internal */
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 
     /* Self */
