@@ -1,1 +1,5 @@
-exclude: [ /_material ]
+---
+---
+
+exclude:
+- _material
