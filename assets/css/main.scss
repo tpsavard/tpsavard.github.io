@@ -16,36 +16,32 @@ body {
 }
 
 header {
-    .title {
+    h1 {
         /* External */
+        width: 220px;
         margin: 45px auto auto;
         box-sizing: border-box;
 
         /* Internal */
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
 
-        h1 {
-            /* External */
-            margin: 0px;
+        /* Self */
+        font-size: 12pt;
+        font-weight: 300;
+        font-family: $title-font;
 
+        a {
             /* Self */
-            font-size: 12pt;
-            font-weight: 300;
-            font-family: $title-font;
-
-            a {
-                /* Self */
-                @include min-color;
-                text-decoration: none;
-                &:hover {
-                    text-decoration: underline;
-                }
+            @include min-color;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
             }
         }
     }
 
-    .banner {
+    h2 {
         /* External */
         min-height: 120px;
         width: 85vw;
@@ -57,7 +53,7 @@ header {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: center; 
 
         /* Self */
         @include bg-min-color;
@@ -66,16 +62,10 @@ header {
             box-shadow: 10px 7px $dark-twenty-color, 20px 14px $dark-eighty-color;
         }
 
-        h2 {
-            /* External */
-            margin: 0px; 
-
-            /* Self */
-            @include max-color;
-            font-size: 32pt;
-            font-weight: 400;
-            font-family: $banner-font;
-        }
+        @include max-color;
+        font-size: 32pt;
+        font-weight: 400;
+        font-family: $banner-font;
     }   
 }
 
