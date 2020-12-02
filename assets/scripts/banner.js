@@ -8,7 +8,7 @@ quotes = [
 ]
 
 window.addEventListener("load", (event) => {
-    var node = document.getElementById('banner');
+    var node = document.getElementById('banner-content');
     node.innerHTML = '&laquo;' + getRandomQuote() + '&raquo;';
 });
 
