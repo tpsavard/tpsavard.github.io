@@ -25,17 +25,18 @@ header {
         display: flex;
         justify-content: center;
 
-        /* Self */
-        font-family: $title-font;
-
-        p {
+        h1 {
             /* External */
             margin: 0px;
+
+            /* Self */
+            font-size: 12pt;
+            font-weight: 300;
+            font-family: $title-font;
 
             a {
                 /* Self */
                 @include min-color;
-                font-family: $title-font;
                 text-decoration: none;
                 &:hover {
                     text-decoration: underline;
@@ -65,7 +66,7 @@ header {
             box-shadow: 10px 7px $dark-twenty-color, 20px 14px $dark-eighty-color;
         }
 
-        h1 {
+        h2 {
             /* External */
             margin: 0px; 
 
