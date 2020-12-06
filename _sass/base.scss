@@ -1,14 +1,20 @@
+@import 'util';
+
 // Light-mode colors
 $max-color: #eeecda;
+$max-color-transparent: #eeecda50; 
 $eighty-color: #f08a5d;
 $twenty-color: #b83b5e;
 $min-color: #6a2c70;
+$min-color-transparent: #6a2c7050;
 
 // Dark-mode colors
 $dark-max-color: #0f3057;
+$dark-max-color-transparent: #0f305750;
 $dark-eighty-color: #00587a;
 $dark-twenty-color: #008891;
 $dark-min-color: #e7e7de;
+$dark-min-color-transparent: #e7e7de50;
 
 // Fonts
 $banner-font: 'Overpass Mono', sans-serif;
@@ -16,54 +22,23 @@ $title-font: 'Overpass', sans-serif;
 $body-font: 'Raleway', sans-serif;
 
 // Color shortcuts
-@mixin bg-max-color {
-    background-color: $max-color;
-    @media (prefers-color-scheme: dark) {
-        background-color: $dark-max-color;
-    }
-}
-@mixin max-color { 
-    color: $max-color;
-    @media (prefers-color-scheme: dark) {
-        color: $dark-max-color;
-    }
+@mixin max-color($property: color) { 
+    @include dark-mode-property($property, $max-color, $dark-max-color); 
 }
 
-@mixin bg-eighty-color {
-    background-color: $eighty-color;
-    @media (prefers-color-scheme: dark) {
-        background-color: $dark-eighty-color;
-    }
-}
-@mixin eighty-color { 
-    color: $eighty-color;
-    @media (prefers-color-scheme: dark) {
-        color: $dark-eighty-color;
-    }
+@mixin eighty-color($property: color) { 
+    @include dark-mode-property($property, $eighty-color, $dark-eighty-color); 
 }
 
-@mixin bg-twenty-color {
-    background-color: $twenty-color;
-    @media (prefers-color-scheme: dark) {
-        background-color: $dark-twenty-color;
-    }
-}
-@mixin twenty-color { 
-    color: $twenty-color;
-    @media (prefers-color-scheme: dark) {
-        color: $dark-twenty-color;
-    }
+@mixin twenty-color($property: color) { 
+    @include dark-mode-property($property, $twenty-color, $dark-twenty-color); 
 }
 
-@mixin bg-min-color {
-    background-color: $min-color;
-    @media (prefers-color-scheme: dark) {
-        background-color: $dark-min-color;
-    }
+@mixin min-color($property: color) { 
+    @include dark-mode-property($property, $min-color, $dark-min-color); 
 }
-@mixin min-color { 
-    color: $min-color;
-    @media (prefers-color-scheme: dark) {
-        color: $dark-min-color;
-    }
-}
+
+@mixin bg-max-color { @include max-color(background-color); }
+@mixin bg-eighty-color { @include eighty-color(background-color); }
+@mixin bg-twenty-color { @include twenty-color(background-color); }
+@mixin bg-min-color { @include min-color(background-color); }

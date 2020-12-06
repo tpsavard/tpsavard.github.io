@@ -1,0 +1,6 @@
+@mixin dark-mode-property($property, $value, $dark-mode-value) {
+    #{$property}: $value;
+    @media (prefers-color-scheme: dark) {
+        #{$property}: $dark-mode-value;
+    }
+}
