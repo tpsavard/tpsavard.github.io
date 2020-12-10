@@ -69,6 +69,7 @@
         /* External */
         min-height: 120px;
         width: 85vw;
+        max-width: 1200px;
         padding: 30px 30px;
         margin: 10px auto 44px;
         box-sizing: border-box;
@@ -90,6 +91,7 @@
         font-size: 32pt;
         font-weight: 400;
         font-family: $banner-font;
+        text-align: center;
     }
 
     nav {
