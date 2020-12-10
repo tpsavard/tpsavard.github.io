@@ -4,8 +4,8 @@
 @import 'util';
 @import 'base';
 
-@include desktop-content {
-
+@include mobile-content {
+    
     /* Common Styles */
 
     body {
@@ -21,7 +21,7 @@
     }
 
     .wide-span {
-        margin: 0px 4px;
+        margin: 0px 10px;
     }
 
     .block {
@@ -29,7 +29,7 @@
         padding: 15px;
         margin: 15px auto 7px;
         box-sizing: border-box;
-
+    
         /* Self */
         @include bg-min-color;
         @include max-color;
@@ -43,7 +43,9 @@
 
     h1 {
         /* External */
-        margin: 45px auto auto;
+        width: 100vw;
+        padding: 15px 15px 0px;
+        margin: 0px;
         box-sizing: border-box;
 
         /* Internal */
@@ -51,13 +53,15 @@
         justify-content: center;
 
         /* Self */
+        @include bg-min-color;
+        @include max-color;
         font-size: 12pt;
         font-weight: 300;
         font-family: $title-font;
 
         a {
             /* Self */
-            @include min-color;
+            @include max-color;
             text-decoration: none;
             &:hover {
                 text-decoration: underline;
@@ -67,10 +71,9 @@
 
     h2 {
         /* External */
-        min-height: 120px;
-        width: 85vw;
+        width: 100vw;
         padding: 30px 30px;
-        margin: 10px auto 44px;
+        margin: auto auto 44px;
         box-sizing: border-box;
 
         /* Internal */
@@ -90,11 +93,12 @@
         font-size: 32pt;
         font-weight: 400;
         font-family: $banner-font;
+        text-align: center;
     }
 
     nav {
         /* External */
-        width: 600px;
+        width: 100vw;
 
         /* Internal */
         display: flex;
@@ -114,7 +118,7 @@
 
     footer {
         /* External */
-        width: 600px;
+        width: 100vw;
 
         /* Internal */
         display: flex;

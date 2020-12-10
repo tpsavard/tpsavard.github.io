@@ -1,6 +1,18 @@
+// Mixin to set a property to one of two given values, depending on whether the browser is set to dark mode.
 @mixin dark-mode-property($property, $value, $dark-mode-value) {
     #{$property}: $value;
     @media (prefers-color-scheme: dark) {
         #{$property}: $dark-mode-value;
     }
+}
+
+// Mixins to define the boundaries for different scaled stylings.
+$mobile-desktop-boundary: 800px;
+
+@mixin mobile-content {
+    @media (max-width: $mobile-desktop-boundary - 1) { @content; }
+}
+
+@mixin desktop-content {
+    @media (min-width: $mobile-desktop-boundary) { @content; }
 }
