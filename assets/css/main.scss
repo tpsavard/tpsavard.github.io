@@ -20,7 +20,7 @@
         font-family: $body-font;
     }
 
-    .wide-span {
+    .decorative-char {
         margin: 0px 4px;
     }
 
@@ -36,6 +36,20 @@
         box-shadow: 10px 7px $twenty-color;
         @media (prefers-color-scheme: dark) {
             box-shadow: 10px 7px $dark-twenty-color;
+        }
+    }
+
+    #banner {
+        /* External */
+        padding: 30px 30px;
+        margin: 10px auto 44px;
+        box-sizing: border-box; 
+
+        /* Self */
+        @include bg-min-color;
+        box-shadow: 10px 7px $twenty-color, 20px 14px $eighty-color;
+        @media (prefers-color-scheme: dark) {
+            box-shadow: 10px 7px $dark-twenty-color, 20px 14px $dark-eighty-color;
         }
     }
 
@@ -70,23 +84,14 @@
         min-height: 120px;
         width: 85vw;
         max-width: 1200px;
-        padding: 30px 30px;
-        margin: 10px auto 44px;
-        box-sizing: border-box;
 
         /* Internal */
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center; 
+        align-items: center;
 
         /* Self */
-        @include bg-min-color;
-        box-shadow: 10px 7px $twenty-color, 20px 14px $eighty-color;
-        @media (prefers-color-scheme: dark) {
-            box-shadow: 10px 7px $dark-twenty-color, 20px 14px $dark-eighty-color;
-        }
-
         @include max-color;
         font-size: 32pt;
         font-weight: 400;
