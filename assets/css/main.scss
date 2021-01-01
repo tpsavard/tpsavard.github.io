@@ -47,6 +47,7 @@
 
         /* Self */
         @include bg-min-color;
+        @include max-color;
         box-shadow: 10px 7px $twenty-color, 20px 14px $eighty-color;
         @media (prefers-color-scheme: dark) {
             box-shadow: 10px 7px $dark-twenty-color, 20px 14px $dark-eighty-color;
@@ -92,7 +93,6 @@
         align-items: center;
 
         /* Self */
-        @include max-color;
         font-size: 32pt;
         font-weight: 400;
         font-family: $banner-font;

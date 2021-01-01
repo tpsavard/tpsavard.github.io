@@ -5,6 +5,8 @@ quotes = [
     'So much for the little training cruise...',
     'Festina Lente',
     'Frog blast the vent core!',
+    'Perpendicular Gothic',
+    'The Only Good System is a Sound System',
 ]
 
 window.addEventListener("load", (event) => {
