@@ -10,8 +10,8 @@ quotes = [
 ]
 
 window.addEventListener("load", (event) => {
-    var node = document.getElementById('banner');
-    node.innerHTML = '&laquo;' + getRandomQuote() + '&raquo;';
+    var node = document.getElementById('quote');
+    node.innerHTML = '&laquo; ' + getRandomQuote() + ' &raquo;';
 });
 
 function getRandomQuote() {

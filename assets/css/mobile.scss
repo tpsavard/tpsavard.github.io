@@ -39,39 +39,35 @@
         }
     }
 
-    #banner {
-        /* External */
-        padding: 20px 30px 30px;
-        margin: auto auto 44px;
-        box-sizing: border-box; 
-
-        /* Self */
-        @include bg-min-color;
-        box-shadow: 10px 7px $twenty-color, 20px 14px $eighty-color;
-        @media (prefers-color-scheme: dark) {
-            box-shadow: 10px 7px $dark-twenty-color, 20px 14px $dark-eighty-color;
-        }
-    }
-
     /* Targeted Styles */
 
     h1 {
         /* External */
         width: 100vw;
-        padding: 15px 15px 0px;
-        margin: 0px;
-        box-sizing: border-box;
+        padding: 20px 30px 30px;
+        margin: auto auto 44px;
+        box-sizing: border-box; 
 
         /* Internal */
         display: flex;
+        flex-direction: column;
         justify-content: center;
+        align-items: center; 
+        // display: flex;
+        // justify-content: space-evenly;
+        // align-items: center;
 
         /* Self */
         @include bg-min-color;
         @include max-color;
-        font-size: 12pt;
-        font-weight: 300;
-        font-family: $title-font;
+        font-size: 24pt;
+        font-weight: 400;
+        font-family: $banner-font;
+        text-align: center;
+        box-shadow: 10px 7px $twenty-color, 20px 14px $eighty-color;
+        @media (prefers-color-scheme: dark) {
+            box-shadow: 10px 7px $dark-twenty-color, 20px 14px $dark-eighty-color;
+        }
 
         a {
             /* Self */
@@ -86,19 +82,20 @@
     h2 {
         /* External */
         width: 100vw;
+        padding: 15px 15px 0px;
+        margin: 0px;
+        box-sizing: border-box;
 
         /* Internal */
         display: flex;
-        flex-direction: column;
         justify-content: center;
-        align-items: center; 
 
         /* Self */
+        @include bg-min-color;
         @include max-color;
-        font-size: 32pt;
-        font-weight: 400;
-        font-family: $banner-font;
-        text-align: center;
+        font-size: 10pt;
+        font-weight: 300;
+        font-family: $title-font;
     }
 
     nav {
