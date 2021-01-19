@@ -7,12 +7,12 @@
 }
 
 // Mixins to define the boundaries for different scaled stylings.
-$mobile-desktop-boundary: 800px;
+$min-desktop-width: 720px;
 
 @mixin mobile-content {
-    @media (max-width: $mobile-desktop-boundary - 1) { @content; }
+    @media (max-width: $min-desktop-width - 1) { @content; }
 }
 
 @mixin desktop-content {
-    @media (min-width: $mobile-desktop-boundary) { @content; }
+    @media (min-width: $min-desktop-width) { @content; }
 }

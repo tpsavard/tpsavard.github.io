@@ -27,7 +27,7 @@
     .block {
         /* External */
         padding: 15px;
-        margin: 15px auto 7px;
+        margin: auto auto 7px;
         box-sizing: border-box;
     
         /* Self */
@@ -44,18 +44,18 @@
     h1 {
         /* External */
         width: 100vw;
-        padding: 20px 30px 30px;
+        padding: 20px 10px;
         margin: auto auto 44px;
         box-sizing: border-box; 
 
         /* Internal */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center; 
         // display: flex;
-        // justify-content: space-evenly;
-        // align-items: center;
+        // flex-direction: column;
+        // justify-content: center;
+        // align-items: center; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         /* Self */
         @include bg-min-color;
@@ -91,8 +91,6 @@
         justify-content: center;
 
         /* Self */
-        @include bg-min-color;
-        @include max-color;
         font-size: 10pt;
         font-weight: 300;
         font-family: $title-font;

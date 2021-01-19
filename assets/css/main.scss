@@ -20,14 +20,10 @@
         font-family: $body-font;
     }
 
-    .decorative-char {
-        margin: 0px 4px;
-    }
-
     .block {
         /* External */
         padding: 15px;
-        margin: 15px auto 7px;
+        margin: auto auto 7px;
         box-sizing: border-box;
 
         /* Self */
@@ -47,20 +43,16 @@
         width: 85vw;
         max-width: 1200px;
         padding: 30px 80px;
-        margin: 10px auto 44px;
+        margin: 45px auto;
         box-sizing: border-box; 
 
         /* Internal */
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: center;
 
         /* Self */
         font-size: 32pt;
-        @media (max-width: 1080px) {
-            font-size: 24pt; 
-        }
-
         font-weight: 400;
         font-family: $banner-font;
         text-align: center;
@@ -84,7 +76,8 @@
 
     h2 {
         /* External */
-        margin: 45px auto auto;
+        width: 85vw;
+        margin: 15px auto;
         box-sizing: border-box;
 
         /* Internal */
@@ -94,6 +87,7 @@
         /* Self */
         font-size: 12pt;
         font-weight: 300;
+        font-style: italic;
         font-family: $title-font;
     }
 
