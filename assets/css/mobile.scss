@@ -20,10 +20,6 @@
         font-family: $body-font;
     }
 
-    .decorative-char {
-        margin: 0px 10px;
-    }
-
     .block {
         /* External */
         padding: 15px;
@@ -49,10 +45,6 @@
         box-sizing: border-box; 
 
         /* Internal */
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: center;
-        // align-items: center; 
         display: flex;
         justify-content: center;
         align-items: center;
@@ -77,23 +69,6 @@
                 text-decoration: underline;
             }
         }
-    }
-
-    h2 {
-        /* External */
-        width: 100vw;
-        padding: 15px 15px 0px;
-        margin: 0px;
-        box-sizing: border-box;
-
-        /* Internal */
-        display: flex;
-        justify-content: center;
-
-        /* Self */
-        font-size: 10pt;
-        font-weight: 300;
-        font-family: $title-font;
     }
 
     nav {
@@ -140,6 +115,23 @@
                 };
             }
         }
+    }
+
+    #quote {
+        /* External */
+        width: 100vw;
+        padding: 15px 15px 0px;
+        margin: 0px;
+        box-sizing: border-box;
+
+        /* Internal */
+        display: flex;
+        justify-content: center;
+
+        /* Self */
+        font-size: 10pt;
+        font-weight: 300;
+        font-family: $title-font;
     }
 
 }
