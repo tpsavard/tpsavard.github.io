@@ -4,25 +4,19 @@
 $title-font: 'Overpass', sans-serif;
 $body-font: 'Overpass', serif;
 
-// Light-mode colors
-$max-color: #f8f9fa;
-$max-color-transparent: #f8f9fa50;
-$min-color: #212529;
-$min-color-transparent: #21252950;
-
-// Dark-mode colors
-$dark-max-color: #212529;
-$dark-max-color-transparent: #21252950;
-$dark-min-color: #f8f9fa;
-$dark-min-color-transparent: #f8f9fa50;
+// Colors
+$max-color: #dddddd;
+$max-color-transparent: #dddddd50;
+$min-color: #222831;
+$min-color-transparent: #22283150;
 
 // Color shortcuts
 @mixin max-color($property: color) { 
-    @include dark-mode-property($property, $max-color, $dark-max-color); 
+    @include dark-mode-property($property, $max-color, $min-color); 
 }
 
 @mixin min-color($property: color) { 
-    @include dark-mode-property($property, $min-color, $dark-min-color); 
+    @include dark-mode-property($property, $min-color, $max-color); 
 }
 
 @mixin bg-max-color { @include max-color(background-color); }
