@@ -22,14 +22,14 @@
             padding: 35px 35px 0px;
             margin: 0px;
             box-sizing: border-box;
-
+            
             display: flex;
             justify-content: space-between;
 
-            font-size: 24pt;
-            font-weight: 100;
-            font-style: italic;
             font-family: $title-font;
+            font-size: 24pt;
+            font-style: italic;
+            font-weight: 100;
 
             a {
                 @include min-color;
@@ -40,12 +40,13 @@
             }
         }
 
-        h2 {
+        div#banner {
             height: 250px;
             width: 100vw;
             padding-left: 35px;
             margin: 5px 0px 0px;
             box-sizing: border-box;
+            position: relative;
 
             display: flex;
             justify-content: start;
@@ -60,9 +61,29 @@
 
             @include max-color;
             text-shadow: 1px 2px 5px $min-color-transparent;
+            font-family: $title-font;
             font-size: 32pt;
             font-weight: 900;
-            font-family: $title-font;
+
+            span#credit {
+                position: absolute;
+                right: 5px;
+                bottom: 2px;
+
+                text-shadow: none;
+                font-family: $body-font;
+                font-size: 10pt;
+                font-style: italic;
+                font-weight: 100;
+
+                a {
+                    @include max-color-transparent;
+                    text-decoration: none;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
         }
     }
 
