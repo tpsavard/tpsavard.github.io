@@ -1,37 +1,24 @@
 @import 'util';
 
-// Light-mode colors
-$max-color: #eeecda;
-$max-color-transparent: #eeecda50; 
-$eighty-color: #f08a5d;
-$twenty-color: #b83b5e;
-$min-color: #6a2c70;
-$min-color-transparent: #6a2c7050;
-
-// Dark-mode colors
-$dark-max-color: #0f3057;
-$dark-max-color-transparent: #0f305750;
-$dark-eighty-color: #00587a;
-$dark-twenty-color: #008891;
-$dark-min-color: #e7e7de;
-$dark-min-color-transparent: #e7e7de50;
-
 // Fonts
-$banner-font: 'Overpass Mono', sans-serif;
 $title-font: 'Overpass', sans-serif;
 $body-font: 'Overpass', serif;
+
+// Light-mode colors
+$max-color: #f8f9fa;
+$max-color-transparent: #f8f9fa50;
+$min-color: #212529;
+$min-color-transparent: #21252950;
+
+// Dark-mode colors
+$dark-max-color: #212529;
+$dark-max-color-transparent: #21252950;
+$dark-min-color: #f8f9fa;
+$dark-min-color-transparent: #f8f9fa50;
 
 // Color shortcuts
 @mixin max-color($property: color) { 
     @include dark-mode-property($property, $max-color, $dark-max-color); 
-}
-
-@mixin eighty-color($property: color) { 
-    @include dark-mode-property($property, $eighty-color, $dark-eighty-color); 
-}
-
-@mixin twenty-color($property: color) { 
-    @include dark-mode-property($property, $twenty-color, $dark-twenty-color); 
 }
 
 @mixin min-color($property: color) { 
@@ -39,6 +26,4 @@ $body-font: 'Overpass', serif;
 }
 
 @mixin bg-max-color { @include max-color(background-color); }
-@mixin bg-eighty-color { @include eighty-color(background-color); }
-@mixin bg-twenty-color { @include twenty-color(background-color); }
 @mixin bg-min-color { @include min-color(background-color); }

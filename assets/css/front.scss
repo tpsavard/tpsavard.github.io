@@ -1,0 +1,82 @@
+---
+---
+
+@import 'util';
+@import 'base';
+
+@include desktop-content {
+
+    body {
+        margin: 0px;
+
+        @include bg-max-color;
+        @include min-color;
+        font-size: 12pt;
+        font-weight: 400;
+        font-family: $body-font;
+    }
+
+    header {
+        h1 {
+            width: 100vw;
+            padding: 35px 35px 0px;
+            margin: 0px;
+            box-sizing: border-box;
+
+            display: flex;
+            justify-content: space-between;
+
+            font-size: 24pt;
+            font-weight: 100;
+            font-style: italic;
+            font-family: $title-font;
+
+            a {
+                @include min-color;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        h2 {
+            height: 250px;
+            width: 100vw;
+            padding-left: 35px;
+            margin: 5px 0px 0px;
+            box-sizing: border-box;
+
+            display: flex;
+            justify-content: start;
+            align-items: center;
+
+            background-image: url("../imgs/banner.jpg");
+            background-size: cover;
+            background-position: center;
+
+            @include max-color;
+            text-shadow: 1px 2px 5px $min-color-transparent;
+            font-size: 32pt;
+            font-weight: 900;
+            font-family: $title-font;
+        }
+    }
+
+    nav {   
+        width: 600px;
+        margin: 15px auto auto; 
+
+        display: flex;
+        justify-content: space-evenly;
+
+        a {
+            @include min-color;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+}
