@@ -4,7 +4,7 @@
 @import 'util';
 @import 'base';
 
-@include desktop-content {
+@include mobile-content {
 
     body {
         margin: 0px;
@@ -51,16 +51,14 @@
         }
 
         h2 {
-            min-height: 250px;
             width: 100vw;
-            padding: 0px 35px 0px;
+            padding: 20px 35px;
             margin: 5px 0px 0px;
             box-sizing: border-box;
             position: relative;
 
             display: flex;
             justify-content: start;
-            align-items: center;
 
             @include dark-mode-property(
                 background-image, 
@@ -72,7 +70,7 @@
             @include max-color;
             text-shadow: 1px 2px 5px $min-color-transparent;
             font-family: $title-font;
-            font-size: 32pt;
+            font-size: 18pt;
             font-weight: 900;
 
             div#credit {
@@ -117,8 +115,8 @@
 
     main {
         div.post {
-            max-width: 600px;
-            margin: 45px auto auto;
+            max-width: 630px;
+            margin: 45px 15px auto;
 
             div.title {
                 font-family: $title-font;
