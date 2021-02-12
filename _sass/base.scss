@@ -23,5 +23,9 @@ $min-color-transparent: #22283150;
     @include dark-mode-property($property, $min-color, $max-color); 
 }
 
+@mixin min-color-transparent($property: color) { 
+    @include dark-mode-property($property, $min-color-transparent, $max-color-transparent); 
+}
+
 @mixin bg-max-color { @include max-color(background-color); }
 @mixin bg-min-color { @include min-color(background-color); }

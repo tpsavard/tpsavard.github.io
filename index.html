@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.gstatic.com"> 
-    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,400;0,900;1,100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,400;0,900;1,100;1,400&display=swap" rel="stylesheet">
     <link href="assets/css/front.css" rel="stylesheet">
     <script src="/assets/scripts/quote.js"></script>
     <title>tpsavard.net</title>
@@ -26,9 +26,17 @@
         &bull;
         <a href="/">About</a>
     </nav>
-    <main></main>
-    <!-- <footer>
-        <p>Copyright &#169; 2020 Timothy Savard.</p>
-        <p>Hosted on <a href="https://github.com/tpsavard/tpsavard.github.io">Github</a>.</p>
-    </footer> -->
+    <main>
+        {% for post in site.posts %}
+            <div class="post">
+                <div class="title"><a href="{{ post.url }}">{{ post.title }}</a></div>
+                <div class="info">
+                    {{ post.date | date: "%b %-d, %Y" }} &bull; {{ post.tags | join: ", " }}
+                </div>
+                <div class="body">
+                    {{ post.content }}
+                </div>
+            </div>
+        {% endfor %}
+    </main>
 </body>

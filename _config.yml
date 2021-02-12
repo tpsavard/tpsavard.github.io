@@ -1,5 +1,10 @@
 ---
 ---
+# plugins:
+#   - jekyll-paginate
 
 exclude:
-- _material
+  - _material
+
+# paginate: 2
+# paginate_path: "/part:num/"
