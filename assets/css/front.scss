@@ -115,6 +115,9 @@
         display: flex;
         justify-content: space-evenly;
 
+        font-style: italic;
+        font-weight: 100;
+
         a {
             @include min-color;
             text-decoration: none;
