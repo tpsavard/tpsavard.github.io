@@ -28,7 +28,7 @@
     header {
         width: 100vw;
         height: 100px;
-        padding: 0px 35px;
+        padding: 10px 35px 0px;
         box-sizing: border-box;
         
         display: flex;
@@ -67,7 +67,6 @@
         div#nav {   
             width: 350px;
             height: fit-content;
-
             margin-left: 35px;
             
             display: flex;
@@ -87,7 +86,7 @@
     main {
         div.post {
             max-width: 600px;
-            margin: 45px auto auto;
+            margin: 15px auto auto;
 
             div.title {
                 font-family: $title-font;

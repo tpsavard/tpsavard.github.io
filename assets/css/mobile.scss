@@ -39,7 +39,7 @@
             margin: 0px;
             
             font-family: $title-font;
-            font-size: 24pt;
+            font-size: 32pt;
             font-style: italic;
             font-weight: 900;
 
@@ -65,6 +65,7 @@
 
         div#nav {
             width: 100%;
+            max-width: 350px;
             padding-top: 7px;
             
             display: flex;
@@ -84,7 +85,7 @@
     main {
         div.post {
             max-width: 600px;
-            margin: 45px auto auto;
+            margin: 35px 15px auto;
 
             div.title {
                 font-family: $title-font;

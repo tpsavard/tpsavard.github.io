@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<div class="post">
+    <div class="title"><a href="{{ post.url }}">{{ page.title }}</a></div>
+    <div class="info">
+        {{ page.date | date: "%b %-d, %Y" }} &bull; {{ page.tags | join: ", " }}
+    </div>
+    <div class="body">
+        {{ page.content }}
+    </div>
+</div>
