@@ -69,11 +69,21 @@
             background-size: cover;
             background-position: center;
 
-            @include max-color;
             text-shadow: 1px 2px 5px $min-color-transparent;
             font-family: $title-font;
             font-size: 32pt;
             font-weight: 900;
+
+            div#quote{
+                a {
+                    @include max-color;
+                    text-decoration: none;
+                    &:hover {
+                        @include dark-mode-property(text-decoration-color, $max-color, $min-color);
+                        text-decoration: underline;
+                    }
+                }
+            }
 
             div#credit {
                 position: absolute;

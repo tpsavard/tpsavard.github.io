@@ -3,9 +3,26 @@
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
-    <title>{{ page.title }}</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,400;1,100;1,400;1,900&display=swap" rel="stylesheet">
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="/assets/css/mobile.css" rel="stylesheet">
+    <title>tpsavard.net &bull; {{ page.title }}</title>
 </head>
 <body>
-    <h1>{{ page.title }}</h1>
-    {{ content }}
+    <header>
+        <h1><a href="/">tpsavard.net</a></h1>
+        <div id="nav">
+            <a href="/">Projects</a>
+            &bull;
+            <a href="/">Writing</a>
+            &bull;
+            <a href="/">Links</a>
+            &bull;
+            <a href="/">About</a>
+        </div>
+    </header>
+    <main>
+        {{ page.content }}
+    </main>
 </body>

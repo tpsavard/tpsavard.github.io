@@ -1,0 +1,106 @@
+---
+---
+
+@import 'util';
+@import 'base';
+
+@include desktop-content {
+
+    body {
+        margin: 0px;
+
+        @include bg-max-color;
+        @include min-color;
+        font-size: 12pt;
+        font-weight: 400;
+        font-family: $body-font;
+    }
+
+    a {
+        @include min-color;
+        @include dark-mode-property(text-decoration-color, $min-color-transparent, $max-color-transparent);
+        text-decoration: underline;
+        &:hover {
+            @include dark-mode-property(text-decoration-color, $min-color, $max-color);
+        };
+    }
+
+    header {
+        width: 100vw;
+        height: 100px;
+        padding: 0px 35px;
+        box-sizing: border-box;
+        
+        display: flex;
+        justify-content: start;
+        align-items: center;
+
+        h1 {
+            height: fit-content;
+            margin: 0px;
+            
+            font-family: $title-font;
+            font-size: 48pt;
+            font-style: italic;
+            font-weight: 900;
+
+            a {
+                @include dark-mode-property(
+                    background-image, 
+                    url('../imgs/banner.jpg'), 
+                    url('../imgs/banner-dark.jpg'));
+                background-size: cover;
+                background-position: center;
+                
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+
+                text-decoration: none;
+                &:hover {
+                    @include dark-mode-property(text-decoration-color, $min-color, $max-color);
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        div#nav {   
+            width: 350px;
+            height: fit-content;
+
+            margin-left: 35px;
+            
+            display: flex;
+            justify-content: space-between;
+    
+            a {
+                @include min-color;
+                text-decoration: none;
+                &:hover {
+                    @include dark-mode-property(text-decoration-color, $min-color, $max-color);
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    main {
+        div.post {
+            max-width: 600px;
+            margin: 45px auto auto;
+
+            div.title {
+                font-family: $title-font;
+                font-size: 14pt;
+                font-weight: 900;
+            }
+
+            div.info {
+                font-family: $title-font;
+                font-size: 12pt;
+                font-style: italic;
+                font-weight: 100;
+            }
+        }
+    }
+}

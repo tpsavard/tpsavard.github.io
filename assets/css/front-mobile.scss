@@ -28,7 +28,7 @@
     header {
         h1 {
             width: 100vw;
-            padding: 35px 35px 0px;
+            padding: 35px 15px 0px;
             margin: 0px;
             box-sizing: border-box;
             
@@ -52,7 +52,7 @@
 
         h2 {
             width: 100vw;
-            padding: 20px 35px;
+            padding: 20px 15px;
             margin: 5px 0px 0px;
             box-sizing: border-box;
             position: relative;
@@ -67,11 +67,21 @@
             background-size: cover;
             background-position: center;
 
-            @include max-color;
             text-shadow: 1px 2px 5px $min-color-transparent;
             font-family: $title-font;
             font-size: 18pt;
             font-weight: 900;
+
+            div#quote{
+                a {
+                    @include max-color;
+                    text-decoration: none;
+                    &:hover {
+                        @include dark-mode-property(text-decoration-color, $max-color, $min-color);
+                        text-decoration: underline;
+                    }
+                }
+            }
 
             div#credit {
                 position: absolute;
