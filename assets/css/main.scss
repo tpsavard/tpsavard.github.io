@@ -118,7 +118,20 @@
             }
         }
 
-        //about.html
+        // List pages (projects.html, writing.html, links.html)
+        div.list {
+            div.temp {
+                font-style: italic;
+                font-weight: 100;
+            }
+
+            div.desc {
+                width: 100%;
+                margin: 16px 0px;
+            }
+        }
+
+        // about.html
         div.about {
             div.title {
                 a {

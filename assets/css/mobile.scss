@@ -86,24 +86,6 @@
     }
 
     main {
-        // div.post {
-        //     max-width: 600px;
-        //     margin: 35px 15px auto;
-
-        //     div.title {
-        //         font-family: $title-font;
-        //         font-size: 14pt;
-        //         font-weight: 900;
-        //     }
-
-        //     div.info {
-        //         font-family: $title-font;
-        //         font-size: 12pt;
-        //         font-style: italic;
-        //         font-weight: 100;
-        //     }
-        // }
-
         // Common
         div.page {
             max-width: 600px;
@@ -123,6 +105,19 @@
             font-weight: 900;
         }
 
+        // List pages (projects.html, writing.html, links.html)
+        div.list {
+            div.temp {
+                font-style: italic;
+                font-weight: 100;
+            }
+
+            div.desc {
+                width: 100%;
+                margin: 16px 0px;
+            }
+        }
+
         // posts.html
         div.post {
             div.info {
@@ -135,7 +130,7 @@
             }
         }
 
-        //about.html
+        // about.html
         div.about {
             div.title {
                 a {
