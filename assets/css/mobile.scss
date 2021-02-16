@@ -116,6 +116,41 @@
                 width: 100%;
                 margin: 16px 0px;
             }
+
+            div.list-header {
+                width: 100%;
+
+                font-size: 14pt;
+                font-style: italic;
+                font-weight: 100;
+            }
+
+            div.list-item {
+                width: 100%;
+                margin: 16px 0px;
+
+                div.item-title {
+                    margin-bottom: 5px;
+
+                    font-family: $title-font;
+                    font-size: 14pt;
+                    font-weight: 900;
+                }
+
+                div.item-desc {
+                    margin-bottom: 5px;
+
+                    div.quote {
+                        padding-left: 5px;
+                        border-left: 2px solid;
+                        @include dark-mode-property(border-left-color, $min-color, $max-color);
+
+                        font-size: 12pt;
+                        font-style: italic;
+                        font-weight: 100;
+                    }
+                }
+            }
         }
 
         // posts.html
