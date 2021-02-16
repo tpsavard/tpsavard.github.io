@@ -87,21 +87,143 @@
     }
 
     main {
-        div.post {
+        // Common
+        div.page {
             max-width: 600px;
-            margin: 15px auto auto;
+            margin: auto auto 45px;
 
-            div.title {
-                font-family: $title-font;
-                font-size: 14pt;
-                font-weight: 900;
-            }
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        div.title {
+            width: 100%;
+            margin-top: 45px;
 
+            font-family: $title-font;
+            font-size: 18pt;
+            font-weight: 900;
+        }
+
+        // posts.html
+        div.post {
             div.info {
+                width: 100%;
+
                 font-family: $title-font;
                 font-size: 12pt;
                 font-style: italic;
                 font-weight: 100;
+            }
+        }
+
+        //about.html
+        div.about {
+            div.title {
+                a {
+                    text-decoration: none;
+                }
+            }
+            
+            img {
+                width: 600px;
+                height: 400px;
+                margin: 15px;
+                border: 1px solid;
+                box-sizing: border-box;
+
+                object-position: top;
+                object-fit: cover;
+                @include dark-mode-property(border-color, $min-color, $max-color);
+            }
+
+            div.bio {
+                margin: 16px 0px;
+            }
+
+            div.links {
+                margin: 15px;
+
+                display: flex;
+                align-items: center;
+
+                a {
+                    width: 45px;
+                    height: 45px;
+                    margin: 0px 5px 0px;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    @include max-color;
+
+                    font-size: 18pt;
+                    text-decoration: none;
+                }
+
+                a.fa-envelope {
+                    @include dark-mode-property(background-color, #006466, #4CC9F0);
+                }
+
+                a.fa-twitter {
+                    @include dark-mode-property(background-color, #0B525B, #4895EF);
+                }
+
+                a.fa-instagram {
+                    @include dark-mode-property(background-color, #1B3A4B, #3F37C9);
+                }
+
+                a.fa-linkedin-in {
+                    @include dark-mode-property(background-color, #272640, #560BAD);
+                }
+
+                a.fa-github {
+                    @include dark-mode-property(background-color, #312244, #B5179E);
+                }
+
+                a.fa-strava {
+                    @include dark-mode-property(background-color, #4D194D, #F72585);
+                }
+            }
+
+            div.credits {
+                width: 100%;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                div.credit {
+                    width: 100%;
+
+                    display: flex;
+
+                    div.desc {
+                        width: 50%;
+                        padding-right: 5px;
+                        box-sizing: border-box;
+
+                        text-align: end;
+                        font-style: italic;
+                        font-weight: 100;
+                    }
+
+                    div.name {
+                        width: 50%;
+                        padding-left: 5px;
+                        box-sizing: border-box;
+                    }
+                }
+
+                div.line {
+                    width: 100%;
+
+                    text-align: center;
+                    font-style: italic;
+                    font-weight: 100;
+                }
             }
         }
     }
