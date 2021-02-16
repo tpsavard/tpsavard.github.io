@@ -7,12 +7,17 @@
 }
 
 // Mixins to define the boundaries for different scaled stylings.
-$min-desktop-width: 720px;
+$mobileU: 719px;
+$desktopL: $mobileU + 1;
 
 @mixin mobile-content {
-    @media (max-width: $min-desktop-width - 1) { @content; }
+    @media (max-width: $mobileU), 
+        (max-width: $mobileU * 2) and (-webkit-min-device-pixel-ratio: 2),
+        (max-width: $mobileU * 3) and (-webkit-min-device-pixel-ratio: 3) { @content; }
 }
 
 @mixin desktop-content {
-    @media (min-width: $min-desktop-width) { @content; }
+    @media (min-width: $desktopL), 
+        (min-width: $desktopL * 2) and (-webkit-min-device-pixel-ratio: 2),
+        (min-width: $desktopL * 3) and (-webkit-min-device-pixel-ratio: 3) { @content; }
 }

@@ -89,7 +89,8 @@
         // Common
         div.page {
             max-width: 600px;
-            margin: auto 15px 35px;
+            padding: 0px 15px;
+            margin: auto auto 35px;
 
             display: flex;
             flex-direction: column;
@@ -232,6 +233,10 @@
                 a.fa-strava {
                     @include dark-mode-property(background-color, #4D194D, #F72585);
                 }
+            }
+
+            div.links + div.title {
+                text-align: center;
             }
 
             div.credits {
