@@ -4,7 +4,11 @@ layout: default
 <div class="page post">
     <div class="title"><a href="{{ post.url }}">{{ page.title }}</a></div>
     <div class="info">
-        {{ page.date | date: "%b %-d, %Y" }} &bull; {{ page.tags | join: ", " }}
+        {% if post.tags.size > 0 %}
+            {{ post.date | date: "%b %-d, %Y" }} &bull; {{ post.tags | join: ", " }}
+        {% else %}
+            {{ post.date | date: "%b %-d, %Y" }}
+        {% endif %}
     </div>
     <div class="body">
         {{ page.content }}
