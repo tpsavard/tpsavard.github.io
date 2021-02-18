@@ -1,10 +1,6 @@
 ---
 ---
-# plugins:
-#   - jekyll-paginate
+url: https://tpsavard.net
 
 exclude:
   - _material
-
-# paginate: 2
-# paginate_path: "/part:num/"
