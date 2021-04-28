@@ -7,8 +7,10 @@ $body-font: 'Overpass', sans-serif;
 // Colors
 $max-color: #dddddd;
 $max-color-transparent: #dddddd50;
+$max-color-accent: #ffffff50;
 $min-color: #222831;
 $min-color-transparent: #22283150;
+$min-color-accent: #00060950;
 
 // Color shortcuts
 @mixin max-color($property: color) { 
