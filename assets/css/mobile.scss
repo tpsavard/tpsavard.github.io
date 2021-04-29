@@ -115,14 +115,12 @@
 
             div.desc {
                 width: 100%;
-                margin: 16px 0px;
+                margin: 16px 0px 0px;
             }
 
             div.list-header {
                 width: 100%;
                 margin-top: 35px;
-                border-bottom: 1px solid;
-                @include dark-mode-property(border-bottom-color, $min-color, $max-color);
 
                 font-size: 14pt;
                 font-style: italic;
@@ -130,8 +128,10 @@
             }
 
             div.list-item {
-                width: 100%;
-                margin: 16px 0px;
+                margin-top: 12px;
+                padding: 16px;
+                border-radius: 5px;
+                @include dark-mode-property(background-color, $max-color-accent, $min-color-accent);
 
                 div.item-title {
                     margin-bottom: 5px;
@@ -180,12 +180,10 @@
             img {
                 width: 100%;    
                 margin: 15px;
-                border: 1px solid;
                 box-sizing: border-box;
 
                 object-position: top;
                 object-fit: cover;
-                @include dark-mode-property(border-color, $min-color, $max-color);
             }
 
             div.bio {
