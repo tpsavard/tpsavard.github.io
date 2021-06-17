@@ -127,24 +127,11 @@
     }
 
     main {
-        margin-bottom: 35px;
+        max-width: 630px;
+        margin: 45px 15px 35px;
 
-        div.post {
-            max-width: 630px;
-            margin: 45px 15px auto;
-
-            div.title {
-                font-family: $title-font;
-                font-size: 14pt;
-                font-weight: 900;
-            }
-
-            div.info {
-                font-family: $title-font;
-                font-size: 12pt;
-                font-style: italic;
-                font-weight: 100;
-            }
+        p.italics {
+            font-style: italic;
         }
     }
 }
