@@ -6,6 +6,7 @@ quotes = [
     ['So much for the little training cruise.', 'https://www.imdb.com/title/tt0084726/'],
     ['The only good system is a sound system.', 'https://twitter.com/showmepixels/status/837315056031313920'],
     ['Festina Lente', 'https://en.wikipedia.org/wiki/Festina_lente'],
+    ["If that's a joke, I love it. If not, I cannot wait to unpack that with you.", 'https://www.patreon.com/posts/this-better-not-50553173']
 ]
 
 window.addEventListener("load", (event) => {
