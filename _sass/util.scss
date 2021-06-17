@@ -11,9 +11,9 @@ $mobileU: 720px;
 $desktopL: $mobileU + 1;
 
 @mixin mobile-content {
-    @media (max-device-width: $mobileU) { @content; }
+    @media (max-width: $mobileU) { @content; }
 }
 
 @mixin desktop-content {
-    @media (min-device-width: $desktopL) { @content; }
+    @media (min-width: $desktopL) { @content; }
 }
