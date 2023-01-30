@@ -26,54 +26,20 @@
     }
 
     header {
-        width: 100vw;
-        padding: 0px 15px;
-        box-sizing: border-box;
-        
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-
         h1 {
-            padding-top: 35px;
+            width: 100vw;
+            padding: 35px 15px 0px;
             margin: 0px;
-            
-            font-family: $title-font;
-            font-size: 32pt;
-            font-style: italic;
-            font-weight: 900;
-
-            a {
-                @include dark-mode-property(
-                    background-image, 
-                    url('../imgs/banner.jpg'), 
-                    url('../imgs/banner-dark.jpg'));
-                background-size: cover;
-                background-position: center;
-                
-                background-clip: text;
-                -webkit-background-clip: text;
-                color: transparent;
-
-                text-decoration: none;
-                &:hover {
-                    @include dark-mode-property(text-decoration-color, $min-color, $max-color);
-                    text-decoration: underline;
-                }
-            }
-        }
-
-        div#nav {
-            width: 100%;
-            max-width: 350px;
-            padding-top: 7px;
+            box-sizing: border-box;
             
             display: flex;
             justify-content: space-between;
 
+            font-family: $title-font;
+            font-size: 24pt;
             font-style: italic;
             font-weight: 100;
-    
+
             a {
                 @include min-color;
                 text-decoration: none;
@@ -83,179 +49,139 @@
                 }
             }
         }
-    }
 
-    main {
-        // Common
-        div.page {
-            max-width: 600px;
-            padding: 0px 15px;
-            margin: auto auto 35px;
+        h2 {
+            width: 100vw;
+            padding: 20px 15px;
+            margin: 5px 0px 0px;
+            box-sizing: border-box;
+            position: relative;
 
             display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        div.title {
-            width: 100%;
-            margin-top: 35px;
+            justify-content: start;
 
+            @include dark-mode-property(
+                background-image, 
+                url('../imgs/banner.jpg'), 
+                url('../imgs/banner-dark.jpg'));
+            background-size: cover;
+            background-position: center;
+
+            text-shadow: 1px 2px 5px $min-color-transparent;
             font-family: $title-font;
-            font-size: 14pt;
+            font-size: 18pt;
             font-weight: 900;
-        }
 
-        // List pages (projects.html, writing.html, links.html)
-        div.list {
-            div.temp {
-                font-style: italic;
-                font-weight: 100;
-            }
-
-            div.desc {
-                width: 100%;
-                margin: 16px 0px 0px;
-            }
-
-            div.list-header {
-                width: 100%;
-                margin-top: 35px;
-
-                font-size: 14pt;
-                font-style: italic;
-                font-weight: 100;
-            }
-
-            div.list-item {
-                margin-top: 12px;
-                padding: 16px;
-                border-radius: 5px;
-                @include dark-mode-property(background-color, $max-color-accent, $min-color-accent);
-
-                div.item-title {
-                    margin-bottom: 5px;
-
-                    font-family: $title-font;
-                    font-size: 14pt;
-                    font-weight: 900;
-                }
-
-                div.item-desc {
-                    margin-bottom: 5px;
-
-                    div.quote {
-                        padding-left: 5px;
-                        border-left: 2px solid;
-                        @include dark-mode-property(border-left-color, $min-color, $max-color);
-
-                        font-size: 12pt;
-                        font-style: italic;
-                        font-weight: 100;
+            div#quote{
+                a {
+                    @include max-color;
+                    text-decoration: none;
+                    &:hover {
+                        @include dark-mode-property(text-decoration-color, $max-color, $min-color);
+                        text-decoration: underline;
                     }
                 }
             }
         }
+    }
 
-        // about.html
-        div.about {
-            div.title {
-                a {
-                    text-decoration: none;
-                }
-            }
-            
-            img {
-                width: 100%;    
-                margin: 15px;
-                box-sizing: border-box;
+    nav {   
+        max-width: 600px;
+        margin: 15px auto auto; 
 
-                object-position: top;
-                object-fit: cover;
-            }
+        display: flex;
+        justify-content: space-evenly;
 
-            div.bio {
-                margin: 16px 0px;
-            }
+        font-style: italic;
+        font-weight: 100;
 
-            div.links {
-                margin: 15px;
+        a {
+            @include min-color;
+            text-decoration: none;
+        }
 
-                display: flex;
-                align-items: center;
+        a.fa-envelope {
+            &:hover { @include dark-mode-property(color, #006466, #4CC9F0); }
+        }
 
-                a {
-                    width: 42px;
-                    height: 42px;
-                    margin: 0px 3px 0px;
+        a.fa-mastodon {
+            &:hover { @include dark-mode-property(color, #0B525B, #4895EF); }
+        }
 
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+        a.fa-instagram {
+            &:hover { @include dark-mode-property(color, #1B3A4B, #3F37C9); }
+        }
 
-                    @include max-color;
+        a.fa-linkedin-in {
+            &:hover { @include dark-mode-property(color, #272640, #560BAD); }
+        }
 
-                    font-size: 18pt;
-                    text-decoration: none;
-                }
+        a.fa-github {
+            &:hover { @include dark-mode-property(color, #312244, #B5179E); }
+        }
 
-                a.fa-envelope {
-                    @include dark-mode-property(background-color, #006466, #4CC9F0);
-                }
+        a.fa-strava {
+            &:hover { @include dark-mode-property(color, #4D194D, #F72585); }
+        }
+    }
 
-                a.fa-twitter {
-                    @include dark-mode-property(background-color, #0B525B, #4895EF);
-                }
+    main {
+        max-width: 630px;
+        margin: 45px 15px 35px;
 
-                a.fa-instagram {
-                    @include dark-mode-property(background-color, #1B3A4B, #3F37C9);
-                }
+        .header {
+            width: 100%;
+            margin-top: 35px;
 
-                a.fa-linkedin-in {
-                    @include dark-mode-property(background-color, #272640, #560BAD);
-                }
+            font-size: 14pt;
+            font-style: italic;
+            font-weight: 100;
+        }
 
-                a.fa-github {
-                    @include dark-mode-property(background-color, #312244, #B5179E);
-                }
+        .block {
+            margin-top: 12px;
+            padding: 16px;
+            border-radius: 5px;
+            @include dark-mode-property(background-color, $max-color-accent, $min-color-accent);
 
-                a.fa-strava {
-                    @include dark-mode-property(background-color, #4D194D, #F72585);
-                }
-            }
+            .title {
+                margin-bottom: 5px;
 
-            div.links + div.title {
-                text-align: center;
+                font-family: $title-font;
+                font-size: 14pt;
+                font-weight: 900;
             }
 
-            div.credits {
+            .text {
+                margin-bottom: 5px;
+            }
+        }
+
+        .credits {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .credit {
                 width: 100%;
+                margin: 10px;
 
                 display: flex;
                 flex-direction: column;
                 align-items: center;
 
-                div.credit {
-                    width: 100%;
-                    margin: 10px;
-
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-
-                    div.desc {
-                        font-style: italic;
-                        font-weight: 100;
-                    }
-                }
-
-                div.line {
-                    width: 100%;
-
-                    text-align: center;
+                .desc {
                     font-style: italic;
                     font-weight: 100;
                 }
+            }
+
+            .line {
+                width: 100%;
+
+                text-align: center;
+                font-style: italic;
+                font-weight: 100;
             }
         }
     }

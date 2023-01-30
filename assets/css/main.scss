@@ -26,55 +26,20 @@
     }
 
     header {
-        width: 100vw;
-        height: 100px;
-        padding: 10px 35px 0px;
-        box-sizing: border-box;
-        
-        display: flex;
-        justify-content: start;
-        align-items: center;
-
         h1 {
-            height: fit-content;
+            width: 100vw;
+            padding: 35px 35px 0px;
             margin: 0px;
-            
-            font-family: $title-font;
-            font-size: 48pt;
-            font-style: italic;
-            font-weight: 900;
-
-            a {
-                @include dark-mode-property(
-                    background-image, 
-                    url('../imgs/banner.jpg'), 
-                    url('../imgs/banner-dark.jpg'));
-                background-size: cover;
-                background-position: center;
-                
-                background-clip: text;
-                -webkit-background-clip: text;
-                color: transparent;
-
-                text-decoration: none;
-                &:hover {
-                    @include dark-mode-property(text-decoration-color, $min-color, $max-color);
-                    text-decoration: underline;
-                }
-            }
-        }
-
-        div#nav {   
-            width: 350px;
-            height: fit-content;
-            margin-left: 35px;
+            box-sizing: border-box;
             
             display: flex;
             justify-content: space-between;
 
+            font-family: $title-font;
+            font-size: 24pt;
             font-style: italic;
             font-weight: 100;
-    
+
             a {
                 @include min-color;
                 text-decoration: none;
@@ -84,177 +49,149 @@
                 }
             }
         }
+
+        h2 {
+            min-height: 250px;
+            width: 100vw;
+            padding: 0px 35px 0px;
+            margin: 5px 0px 0px;
+            box-sizing: border-box;
+            position: relative;
+
+            display: flex;
+            justify-content: start;
+            align-items: center;
+
+            @include dark-mode-property(
+                background-image, 
+                url('../imgs/banner.jpg'), 
+                url('../imgs/banner-dark.jpg'));
+            background-size: cover;
+            background-position: center;
+
+            text-shadow: 1px 2px 5px $min-color-transparent;
+            font-family: $title-font;
+            font-size: 32pt;
+            font-weight: 900;
+
+            div#quote{
+                a {
+                    @include max-color;
+                    text-decoration: none;
+                    &:hover {
+                        @include dark-mode-property(text-decoration-color, $max-color, $min-color);
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    nav {   
+        max-width: 600px;
+        margin: 15px auto auto; 
+
+        display: flex;
+        justify-content: space-evenly;
+
+        font-style: italic;
+        font-weight: 100;
+
+        a {
+            @include min-color;
+            text-decoration: none;
+        }
+
+        a.fa-envelope {
+            &:hover { @include dark-mode-property(color, #006466, #4CC9F0); }
+        }
+
+        a.fa-mastodon {
+            &:hover { @include dark-mode-property(color, #0B525B, #4895EF); }
+        }
+
+        a.fa-instagram {
+            &:hover { @include dark-mode-property(color, #1B3A4B, #3F37C9); }
+        }
+
+        a.fa-linkedin-in {
+            &:hover { @include dark-mode-property(color, #272640, #560BAD); }
+        }
+
+        a.fa-github {
+            &:hover { @include dark-mode-property(color, #312244, #B5179E); }
+        }
+
+        a.fa-strava {
+            &:hover { @include dark-mode-property(color, #4D194D, #F72585); }
+        }
     }
 
     main {
-        // Common
-        div.page {
-            max-width: 600px;
-            margin: auto auto 45px;
+        max-width: 600px;
+        margin: 45px auto 35px;
 
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        div.title {
+        .header {
             width: 100%;
             margin-top: 45px;
 
-            font-family: $title-font;
-            font-size: 18pt;
-            font-weight: 900;
+            font-size: 14pt;
+            font-style: italic;
+            font-weight: 100;
         }
+        
+        .block {
+            margin-top: 12px;
+            padding: 16px;
+            border-radius: 5px;
+            @include dark-mode-property(background-color, $max-color-accent, $min-color-accent);
 
-        // List pages (projects.html, writing.html, links.html)
-        div.list {
-            div.temp {
-                font-style: italic;
-                font-weight: 100;
-            }
+            .title {
+                margin-bottom: 5px;
 
-            div.desc {
-                width: 100%;
-                margin: 16px 0px 0px;
-            }
-
-            div.list-header {
-                width: 100%;
-                margin-top: 45px;
-
+                font-family: $title-font;
                 font-size: 14pt;
-                font-style: italic;
-                font-weight: 100;
+                font-weight: 900;
             }
 
-            div.list-item {
-                margin-top: 12px;
-                padding: 16px;
-                border-radius: 5px;
-                @include dark-mode-property(background-color, $max-color-accent, $min-color-accent);
-
-                div.item-title {
-                    margin-bottom: 5px;
-
-                    font-family: $title-font;
-                    font-size: 14pt;
-                    font-weight: 900;
-                }
-
-                div.item-desc {
-                    margin-bottom: 5px;
-                }
+            .text {
+                margin: 0px 0px 5px;
             }
         }
 
-        // about.html
-        div.about {
-            div.title {
-                a {
-                    text-decoration: none;
-                }
-            }
-            
-            img {
-                width: 600px;
-                height: 400px;
-                margin: 15px;
-                box-sizing: border-box;
+        .credits {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
-                object-position: top;
-                object-fit: cover;
-            }
-
-            div.bio {
-                margin: 16px 0px;
-            }
-
-            div.links {
-                margin: 15px;
-
-                display: flex;
-                align-items: center;
-
-                a {
-                    width: 45px;
-                    height: 45px;
-                    margin: 0px 5px 0px;
-
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-
-                    @include max-color;
-
-                    font-size: 18pt;
-                    text-decoration: none;
-                }
-
-                a.fa-envelope {
-                    @include dark-mode-property(background-color, #006466, #4CC9F0);
-                }
-
-                a.fa-mastodon {
-                    @include dark-mode-property(background-color, #0B525B, #4895EF);
-                }
-
-                a.fa-instagram {
-                    @include dark-mode-property(background-color, #1B3A4B, #3F37C9);
-                }
-
-                a.fa-linkedin-in {
-                    @include dark-mode-property(background-color, #272640, #560BAD);
-                }
-
-                a.fa-github {
-                    @include dark-mode-property(background-color, #312244, #B5179E);
-                }
-
-                a.fa-strava {
-                    @include dark-mode-property(background-color, #4D194D, #F72585);
-                }
-            }
-
-            div.links + div.title {
-                text-align: center;
-            }
-
-            div.credits {
+            .credit {
                 width: 100%;
 
                 display: flex;
-                flex-direction: column;
-                align-items: center;
 
-                div.credit {
-                    width: 100%;
+                .desc {
+                    width: 50%;
+                    padding-right: 5px;
+                    box-sizing: border-box;
 
-                    display: flex;
-
-                    div.desc {
-                        width: 50%;
-                        padding-right: 5px;
-                        box-sizing: border-box;
-
-                        text-align: end;
-                        font-style: italic;
-                        font-weight: 100;
-                    }
-
-                    div.name {
-                        width: 50%;
-                        padding-left: 5px;
-                        box-sizing: border-box;
-                    }
-                }
-
-                div.line {
-                    width: 100%;
-
-                    text-align: center;
+                    text-align: end;
                     font-style: italic;
                     font-weight: 100;
                 }
+
+                .name {
+                    width: 50%;
+                    padding-left: 5px;
+                    box-sizing: border-box;
+                }
+            }
+
+            .line {
+                width: 100%;
+
+                text-align: center;
+                font-style: italic;
+                font-weight: 100;
             }
         }
     }
